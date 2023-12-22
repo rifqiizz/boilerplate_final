@@ -1,18 +1,21 @@
-import { Inter as FontSans } from 'next/font/google'
-import '@/styles/globals.css'
-import { Provider } from '@/components/provider'
+import { Inter as FontSans } from "next/font/google";
+import { Provider } from "@/components/provider";
 
-const fontSans = FontSans({ subsets: ['latin'] })
+import "@/styles/globals.css";
+
+const fontSans = FontSans({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Final Bytehub',
-  description: 'Batch3 - DevScale Indonesia',
-}
+  title: "ExpiryHub - devscale indonesia",
+  description: "Batch 3 Demo",
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={fontSans.className}><Provider>{children}</Provider></body>
+      <body className={fontSans.className}>
+        <Provider>{children}</Provider>
+      </body>
     </html>
-  )
+  );
 }
