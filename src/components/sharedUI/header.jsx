@@ -17,12 +17,15 @@ export const Header = () => {
   return (
     <header className="flex justify-between items-center">
       <Link href="/">
-        <div className="text-2xl font-extrabold dark:text-white">ExpiryHub</div>
+        <div className="text-2xl">berlaku.id</div>
       </Link>
       <div className="flex gap-4 items-center">
         <div>About</div>
         <div>Features</div>
-        <Button>Login</Button>
+        <Link href='/login'>Login</Link>
+        <Link href="/register" passHref>
+            <Button>Signup</Button>
+        </Link>
         <Switch size="sm" onChange={(e) => setThemeMode(e.target.checked)} />
       </div>
     </header>
