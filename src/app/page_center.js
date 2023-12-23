@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Home_center() {
   return (
     <main>      
       <div className="h-screen flex items-center justify-center">

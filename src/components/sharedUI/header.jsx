@@ -24,9 +24,11 @@ export const Header = () => {
         <div>Features</div>
         <Link href='/login'>Login</Link>
         <Link href="/register" passHref>
-            <Button>Signup</Button>
+            <Button>Register</Button>
         </Link>
+        
         <Switch size="sm" onChange={(e) => setThemeMode(e.target.checked)} />
+        <Link href='/logout'>Logout</Link>
       </div>
     </header>
   );

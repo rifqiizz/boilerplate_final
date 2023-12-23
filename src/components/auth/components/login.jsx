@@ -2,6 +2,7 @@
 
 import { Button, Input } from "@nextui-org/react";
 import React from "react";
+import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
 export const Login = () => {
@@ -20,10 +21,12 @@ export const Login = () => {
 
     if (errorMessage) {
       console.log(errorMessage);
+      toast.error("Error login!");
       return;
     }
 
     console.log(message);
+    toast.success("Login succesfully, redirecting...");
     router.push("/dashboard");
   }
 
